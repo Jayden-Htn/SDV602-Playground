@@ -1,16 +1,19 @@
 
 def fizzbuzz(up_to):
     i = 1
+    list = []
     while i <= up_to:
         if i % 3 == 0 and i % 5 == 0:
-            print('FizzBuzz')
+            list.append('FizzBuzz')
         elif i % 3 == 0:
-            print('Fizz')
+            list.append('Fizz')
         elif i % 5 == 0:
-            print('Buzz')
+            list.append('Buzz')
         else:
-            print(i)
+            list.append(i)
         i += 1
+    return list
 
-fizzbuzz(20)
+fizzbuzz_list = fizzbuzz(20)
+print(fizzbuzz_list)
     
