@@ -4,13 +4,13 @@ def fizzbuzz(up_to):
     list = []
     while i <= up_to:
         if i % 3 == 0 and i % 5 == 0:
-            list.append('FizzBuzz')
+            list.append((i, 'FizzBuzz'))
         elif i % 3 == 0:
-            list.append('Fizz')
+            list.append((i, 'Fizz'))
         elif i % 5 == 0:
-            list.append('Buzz')
+            list.append((i, 'Buzz'))
         else:
-            list.append(i)
+            list.append((i, str(i)))
         i += 1
     return list
 
