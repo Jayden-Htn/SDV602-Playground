@@ -1,2 +1,2 @@
-# SDV601-Playground
-Python playground for SDV601
+# SDV602-Playground
+Python playground for SDV602
