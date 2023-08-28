@@ -1,6 +1,7 @@
 import os
 import time
 from termcolor import colored
+import math
 
 class Canvas:
     def __init__(self, width, height):
@@ -12,7 +13,7 @@ class Canvas:
         return point[0] < 0 or point[0] >= self._x or point[1] < 0 or point[1] >= self._y
 
     def setPos(self, pos, mark):
-        self._canvas[pos[0]][pos[1]] = mark
+        self._canvas[round(pos[0])][round(pos[1])] = mark
 
     def clear(self):
         os.system('cls' if os.name == 'nt' else 'clear')
@@ -30,12 +31,15 @@ class TerminalScribe:
         self.framerate = 0.2
         self.pos = [0, 0]
         self.dir = [0,0]
+
+    def setDegrees(self, degrees):
+        radians = (degrees/180) * math.pi
+        self.dir = [math.sin(radians), -math.cos(radians)]
     
     def forward(self):
         pos = [self.pos[0]+self.dir[0], self.pos[1]+self.dir[1]]
         if not self.canvas.hitsWall(pos):
             self.draw(pos)
-
 
     def draw(self, pos):
         self.canvas.setPos(self.pos, self.trail)
@@ -54,7 +58,10 @@ class TerminalScribe:
 
 canvas = Canvas(10, 10)
 scribe = TerminalScribe(canvas)
-scribe.startDrawing(5, 5)
+scribe.setDegrees(135)
+for i in range(5):
+    scribe.forward()
+# scribe.startDrawing(5, 5)
 
 
 
