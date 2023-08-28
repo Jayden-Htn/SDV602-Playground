@@ -6,6 +6,7 @@ Menu examples
 def show_menu(menu_tuple):
     skip_first_flag = True
     header_line = menu_tuple[0] # 0 tuple is the header
+    print()
     print(header_line)
     for item in menu_tuple:
         if skip_first_flag:
@@ -68,6 +69,16 @@ def run_menu_one(a_value):
     run_menu(menu_one)
     return True
 
+def run_menu_two(a_value):
+    menu_two =  (\
+                   "Select a number.",\
+                   (1,"Menu Fish",test_cmd),  \
+                   (2,"Menu Tortilla",test_cmd),   \
+                   (3,"Quit",quit_cmd)\
+                 )
+    run_menu(menu_two)
+    return True
+
 def test_cmd(a_value):
     print("A dummy command {}".format(a_value))
     return True # contine
@@ -81,7 +92,7 @@ if __name__ == "__main__":
     menu_tuple = (\
                    "Select a number.",\
                    (1,"Menu One",run_menu_one),  \
-                   (2,"Menu Two",test_cmd),   \
+                   (2,"Menu Two",run_menu_two),   \
                    (3,"Menu Three",test_cmd), \
                    (4,"Quit",quit_cmd)\
                  )
