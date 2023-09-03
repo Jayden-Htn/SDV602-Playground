@@ -3,7 +3,6 @@ from pathlib import Path
 
 # my method
 def count_files_scandir(directory):
-    print(directory)
     count = 0
     with os.scandir(directory) as entries:
         for entry in entries:
@@ -30,7 +29,7 @@ def count_file_path(directory):
         if entry.is_file():
             count += 1
         elif entry.is_dir():
-            num = count_file_path(entry.path)
+            num = count_file_path(entry)
             count += num
     return count
 
@@ -39,4 +38,5 @@ if __name__ == "__main__":
     print(count_files_scandir('C:\\Users\\jayde\\Desktop'))
     # os.walk option
     print(count_files_walk('C:\\Users\\jayde\\Desktop'))
-
+    # pathlib option
+    print(count_file_path('C:\\Users\\jayde\\Desktop'))
