@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Chase",
+    "title": "Stealthy sneaker",
+    "price": 50,
+    "scariness": 32
+  },
+  {
+    "name": "Big J",
+    "title": "Hooligan",
+    "price": 24,
+    "scariness": 12
+  },
+  {
+    "name": "Whitefang",
+    "title": "Intimidator",
+    "price": 100,
+    "scariness": 42
+  },
+  {
+    "name": "Sneaky Pete",
+    "title": "Sneaky sneaker",
+    "price": 50,
+    "scariness": 32
+  }
+]
