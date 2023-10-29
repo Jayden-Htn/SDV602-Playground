@@ -1,5 +1,5 @@
 """
-Using Python's threads.
+Example not using threading (takes 2 seconds).
 """
 
 from time import sleep, perf_counter
