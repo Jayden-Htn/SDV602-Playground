@@ -14,12 +14,11 @@ https://newsimland.com/~todd/JSON/?tok={"tok":"MY_TOKEN","cmd":{"SELECT":"tblTes
 https://newsimland.com/~todd/JSON/?tok={"tok":"MY_TOKEN","cmd":{"DELETE":"tblTest","WHERE":"PersonID = 'Jane'"}}
 
 # Update a record in a table
-
 https://newsimland.com/~todd/JSON/?tok={"tok":"MY_TOKEN","cmd":{"STORE":"tblTest","VALUE":[{"PersonID":"Todd","Score":3000}]}}
 
-3.8 Drop the table called tblTest
-
+# Drop a table
 https://newsimland.com/~todd/JSON/?tok={"tok":"MY_TOKEN","cmd":{"DROP":"tblTest"}}
+
 
 # I have chosen to use Thunder CLient (VS Code extension) however other tools like Postman could be used
 # All requests must be made using the GET method
